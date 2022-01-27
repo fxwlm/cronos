@@ -15,5 +15,4 @@ message GenesisState {
     repeated TokenMapping external_contracts = 2 [(gogoproto.nullable) = false];
     repeated TokenMapping auto_contracts = 3 [(gogoproto.nullable) = false];
     // this line is used by starport scaffolding # genesis/proto/state
-    // this line is used by starport scaffolding # ibc/genesis/proto
 }
