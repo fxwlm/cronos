@@ -18,7 +18,6 @@ COVERAGE ?= coverage.txt
 BUILDDIR ?= $(CURDIR)/build
 LEDGER_ENABLED ?= true
 
-SHELL 
 
 # process build tags
 build_tags = netgo
