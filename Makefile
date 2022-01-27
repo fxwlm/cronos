@@ -19,6 +19,7 @@ BUILDDIR ?= $(CURDIR)/build
 LEDGER_ENABLED ?= true
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ldflags = -X github.com/cosmos/cosmos-sdk/version.Name=cronos \
 	-X github.com/cosmos/cosmos-sdk/version.AppName=cronosd \
 	-X github.com/cosmos/cosmos-sdk/version.Version=$(VERSION) \
@@ -29,6 +30,8 @@ BUILD_FLAGS := -ldflags '$(ldflags)'
 BUILD_TAGS := -tags
 =======
 SHELL 
+=======
+>>>>>>> fbd60cb (Update Makefile)
 
 # process build tags
 build_tags = netgo
