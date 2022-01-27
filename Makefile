@@ -2,6 +2,8 @@ BUILDDIR ?= $(CURDIR)/build
 PACKAGES=$(shell go list ./... | grep -v '/simulation')
 COVERAGE ?= coverage.txt
 
+SHELL = bash
+
 GOPATH ?= $(shell $(GO) env GOPATH)
 BINDIR ?= ~/go/bin
 NETWORK ?= mainnet
@@ -15,6 +17,8 @@ NETWORK ?= mainnet
 COVERAGE ?= coverage.txt
 BUILDDIR ?= $(CURDIR)/build
 LEDGER_ENABLED ?= true
+
+SHELL 
 
 # process build tags
 build_tags = netgo
