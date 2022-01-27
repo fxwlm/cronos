@@ -2,6 +2,8 @@ BUILDDIR ?= $(CURDIR)/build
 PACKAGES=$(shell go list ./... | grep -v '/simulation')
 COVERAGE ?= coverage.txt
 
+SHELL = bash
+
 GOPATH ?= $(shell $(GO) env GOPATH)
 BINDIR ?= ~/go/bin
 NETWORK ?= mainnet
@@ -16,6 +18,7 @@ COVERAGE ?= coverage.txt
 BUILDDIR ?= $(CURDIR)/build
 LEDGER_ENABLED ?= true
 
+<<<<<<< HEAD
 ldflags = -X github.com/cosmos/cosmos-sdk/version.Name=cronos \
 	-X github.com/cosmos/cosmos-sdk/version.AppName=cronosd \
 	-X github.com/cosmos/cosmos-sdk/version.Version=$(VERSION) \
@@ -24,6 +27,12 @@ ldflags = -X github.com/cosmos/cosmos-sdk/version.Name=cronos \
 BUILD_FLAGS := -ldflags '$(ldflags)'
 
 BUILD_TAGS := -tags
+=======
+SHELL 
+
+# process build tags
+build_tags = netgo
+>>>>>>> 1365acb (Update Makefile)
 ifeq ($(NETWORK),mainnet)
     BUILD_TAGS := $(BUILD_TAGS) mainnet
 else ifeq ($(NETWORK),testnet)
